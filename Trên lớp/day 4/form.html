@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điền thông tin</title>
+    <style>
+      #source_of_income {
+        width: 170px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>ĐIỀN THÔNG TIN CÁ NHÂN</h1>
+      <table>
+        <tr>
+          <th>
+            <form>
+              <label for="fname">First name*</label><br />
+              <input type="text" id="fname" name="fname" />
+            </form>
+          </th>
+          <th>
+            <form>
+              <label for="lname">Last name*</label><br />
+              <input type="text" id="lname" name="lname" />
+            </form>
+          </th>
+        </tr>
+        <tr>
+          <th colspan="2">
+            <form>
+              <label for="email">Email*</label><br />
+              <input type="email" id="email" name="email" size="60%" />
+            </form>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <form>
+              <label for="pwd">Password*</label><br />
+              <input type="password" name="pwd" id="pwd" />
+            </form>
+          </th>
+          <th>
+            <form>
+              <label for="pwd">Confirm Password*</label><br />
+              <input type="password" name="pwd" id="pwd" />
+            </form>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <form>
+              <label for="Gender">Gender:</label><br />
+              <input type="radio" id="Gender" name="Gender" value="Gender" />
+              <label for="Gender">Male</label>
+              <input type="radio" id="Gender" name="Gender" value="Gender" />
+              <label for="Gender">Female</label>
+            </form>
+          </th>
+          <th>
+            <form>
+              <label for="Gender">Hoppies:</label><br />
+              <input type="checkbox" />
+              <label for="sport">Football</label>
+              <input type="checkbox" />
+              <label for="sport">Basketball</label>
+              <input type="checkbox" />
+              <label for="sport">Swimming</label>
+            </form>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <label for="source_of_income">Source of income:</label><br />
+            <select id="source_of_income" name="source_of_income">
+              <option value="employed">Employed</option>
+              <option value="self_employed">Self-employed</option>
+              <option value="unemployed">Unemployed</option>
+            </select>
+          </th>
+          <th>
+            <label for="gender_name">Income:</label><br />
+            <input
+              type="range"
+              min="0"
+              max="100000"
+              value="20000"
+              class="slider"
+              id="myRange"
+            />
+          </th>
+        </tr>
+        \
+        <tr>
+          <th>
+            <label for="myfile">Upload Profile Picture</label><br />
+            <input type="file" id="myfile" name="file" />
+          </th>
+          <th>
+            <label for="quantity">Age:</label><br />
+            <input type="number" id="quantity" name="quantity" min="1" />
+          </th>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>
+            <b>Bio: </b><br />
+            <textarea
+              id="w3review"
+              name="w3review"
+              rows="4"
+              cols="50"
+            ></textarea>
+          </th>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>

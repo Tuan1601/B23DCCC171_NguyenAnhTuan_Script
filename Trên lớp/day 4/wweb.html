@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điền thông tin</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      center {
+        margin-top: 50px;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      select {
+        width: 170px;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>ĐIỀN THÔNG TIN CÁ NHÂN</h1>
+      <form>
+        <table>
+          <tr>
+            <th>
+              <label for="fname">First name*</label><br />
+              <input type="text" id="fname" name="fname" />
+            </th>
+            <th>
+              <label for="lname">Last name*</label><br />
+              <input type="text" id="lname" name="lname" />
+            </th>
+          </tr>
+          <tr>
+            <th colspan="2">
+              <label for="email">Email*</label><br />
+              <input type="email" id="email" name="email" />
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <label for="pwd">Password*</label><br />
+              <input type="password" name="pwd" id="pwd" />
+            </th>
+            <th>
+              <label for="confirm_pwd">Confirm Password*</label><br />
+              <input type="password" name="confirm_pwd" id="confirm_pwd" />
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <label>Gender:</label><br />
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label>
+            </th>
+            <th>
+              <label>Hobbies:</label><br />
+              <input
+                type="checkbox"
+                id="football"
+                name="hobbies"
+                value="football"
+              />
+              <label for="football">Football</label>
+              <input
+                type="checkbox"
+                id="basketball"
+                name="hobbies"
+                value="basketball"
+              />
+              <label for="basketball">Basketball</label>
+              <input
+                type="checkbox"
+                id="swimming"
+                name="hobbies"
+                value="swimming"
+              />
+              <label for="swimming">Swimming</label>
+            </th>
+          </tr>
+          <tr>
+            <th colspan="2">
+              <label for="source_of_income">Source of income:</label><br />
+              <select id="source_of_income" name="source_of_income">
+                <option value="employed">Employed</option>
+                <option value="self_employed">Self-employed</option>
+                <option value="unemployed">Unemployed</option>
+              </select>
+            </th>
+          </tr>
+        </table>
+      </form>
+    </center>
+  </body>
+</html>

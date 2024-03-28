@@ -1,0 +1,31 @@
+<table width="23%">
+  <tr>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <td width="50%"><label for="gender_name">source of income:</label></td>
+    <td width="50%"><label for="gender_name">Income:</label></td>
+  </tr>
+</table>
+
+<table width="23%">
+  <tr>
+    <td>
+      <select id="source_of_income" name="source_of_income">
+        <option value="employed">Employed</option>
+        <option value="self_employed">Self-employed</option>
+        <option value="unemployed">Unemployed</option>
+      </select>
+    </td>
+
+    <td>
+      <input
+        type="range"
+        min="0"
+        max="100000"
+        value="20000"
+        class="slider"
+        id="myRange"
+      />
+      <p><span id="demo"></span></p>
+    </td>
+  </tr>
+</table>
