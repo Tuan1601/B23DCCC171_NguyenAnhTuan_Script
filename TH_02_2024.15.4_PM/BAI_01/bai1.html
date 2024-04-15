@@ -7,15 +7,24 @@
   </head>
   <body>
     <script>
+      function tangdan(mang) {
+        return mang.sort(function (a, b) {
+          return a - b;
+        });
+      }
+      function loaibo(mang) {
+        var mangrieng = [];
+        mang.forEach(function (item) {
+          if (mangrieng.indexOf(item) === -1) {
+            mangrieng.push(item);
+          }
+        });
+        return mangrieng;
+      }
       var mang = [20, 15, 1, 6, 35, 10, 2, 3, 2, 2, 3];
-      mang.sort(function (a, b) {
-        return a - b;
-      });
-      let mangrutgon = mang.filter((giatri, index, self) => {
-        return self.indexOf(giatri) === index;
-      });
-      document.write(mang, "<br>");
-      document.write(mangrutgon);
+
+      document.write(tangdan(mang), "<br>");
+      document.write(loaibo(mang));
     </script>
   </body>
 </html>
