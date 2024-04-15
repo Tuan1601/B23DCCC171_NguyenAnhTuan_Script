@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var mang = [20, 15, 1, 6, 35, 10, 2, 3, 2, 2, 3];
+      mang.sort(function (a, b) {
+        return a - b;
+      });
+      let mangrutgon = mang.filter((giatri, index, self) => {
+        return self.indexOf(giatri) === index;
+      });
+      document.write(mang, "<br>");
+      document.write(mangrutgon);
+    </script>
+  </body>
+</html>

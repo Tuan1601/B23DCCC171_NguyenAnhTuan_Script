@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sochinhphuong(n) {
+        return Number.isInteger(Math.sqrt(n));
+      }
+      function solonhonTBC(mang) {
+        const TB = mang.reduce((tong, so) => tong + so, 0) / mang.length;
+        const solonhonTB = mang.filter((so) => so > TB);
+        return solonhonTB;
+      }
+      function TBC(mang) {
+        const TB = mang.reduce((tong, so) => tong + so, 0) / mang.length;
+        return TB;
+      }
+      var mang = [20, 4, 1, 6, 35, 10, 2, 3, 2, 2, 3, 16, 9, 25, -2, -5, -10];
+      let soLonNhat = Math.max(...mang);
+      let SCP = mang.filter(sochinhphuong);
+      let mangKhongAm = mang.filter(function (so) {
+        return so >= 0;
+      });
+      document.write(soLonNhat, "<br>");
+      document.write(SCP, "<br>");
+      document.write(solonhonTBC(mang), "<br>");
+      document.write(TBC(mangKhongAm));
+    </script>
+  </body>
+</html>
