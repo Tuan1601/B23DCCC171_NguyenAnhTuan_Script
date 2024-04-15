@@ -7,6 +7,19 @@
   </head>
   <body>
     <script>
+      function SLN(mang) {
+        if (mang.length === 0) {
+          return "Mảng rỗng";
+        }
+
+        let max = mang[0];
+        for (let i = 1; i < mang.length; i++) {
+          if (mang[i] > max) {
+            max = mang[i];
+          }
+        }
+        return max;
+      }
       function sochinhphuong(n) {
         return Number.isInteger(Math.sqrt(n));
       }
@@ -20,12 +33,11 @@
         return TB;
       }
       var mang = [20, 4, 1, 6, 35, 10, 2, 3, 2, 2, 3, 16, 9, 25, -2, -5, -10];
-      let soLonNhat = Math.max(...mang);
       let SCP = mang.filter(sochinhphuong);
       let mangKhongAm = mang.filter(function (so) {
         return so >= 0;
       });
-      document.write(soLonNhat, "<br>");
+      document.write(SLN(mang), "<br>");
       document.write(SCP, "<br>");
       document.write(solonhonTBC(mang), "<br>");
       document.write(TBC(mangKhongAm));
