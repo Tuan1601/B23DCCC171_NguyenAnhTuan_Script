@@ -1,0 +1,118 @@
+<!--Họ tên: Nguyễn Anh Tuấn 
+    Mã SV: B23DCCC171
+     Bài 1: -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: black;
+        padding: 20px;
+      }
+      .calculator {
+        background-color: rgb(62, 104, 121);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        margin: auto;
+      }
+      .kq {
+        font-size: 18px;
+        color: black;
+      }
+      .loi {
+        font-size: 18px;
+        color: red;
+      }
+      .calculator input {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      . .calculator button:hover {
+      }
+      .calculator button {
+        width: 100px;
+        padding: 10px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: green;
+        color: white;
+        cursor: pointer;
+      }
+      background-color: greenyellow;
+    </style>
+  </head>
+  <body>
+    <center>
+      <div class="calculator">
+        <h1>Máy Tính</h1>
+        <input type="text" id="inputA" placeholder="Nhập số" />
+        <input type="text" id="inputB" placeholder="nhập số" />
+        <br />
+        <button onclick="calculator('SUM')">SUM</button>
+        <button onclick="calculator('SUBTRACT')">SUBTRACT</button>
+        <button onclick="calculator('MULTIPLY')">MULTIPLY</button>
+        <button onclick="calculator('DIVIDE')">DIVIDE</button>
+        <button onclick="resetInput()">RESET</button>
+        <br />
+        <div class="kq" id="kq"></div>
+        <div class="loi" id="loi"></div>
+      </div>
+    </center>
+    <script>
+      function dieukien(value) {
+        return !isNaN(parseFloat(value)) && isFinite(value);
+      }
+      function calculator(operation) {
+        const input1 = document.getElementById("inputA").value;
+        const input2 = document.getElementById("inputB").value;
+        const resultElement = document.getElementById("kq");
+        const errorElement = document.getElementById("loi");
+        errorElement.innerHTML = "";
+        if (!dieukien(input1) || !dieukien(input2)) {
+          errorElement.innerHTML = "Sai cú pháp";
+          resultElement.innerHTML = "";
+          return;
+        }
+        const a = parseFloat(input1);
+        const b = parseFloat(input2);
+        let ketqua;
+        switch (operation) {
+          case "SUM":
+            ketqua = a + b;
+            break;
+          case "SUBTRACT":
+            ketqua = a - b;
+            break;
+          case "MULTIPLY":
+            ketqua = a * b;
+            break;
+          case "DIVIDE":
+            if (b == 0) {
+              errorElement.innerHTML = "Không thể chia cho 0";
+              resultElement.innerHTML = "";
+              return;
+            }
+            ketqua = a / b;
+            break;
+        }
+        resultElement.innerHTML = `Kết quả là: ${ketqua}`;
+      }
+      function resetInput() {
+        document.getElementById("inputA").value = "";
+        document.getElementById("inputB").value = "";
+        document.getElementById("kq").innerHTML = "";
+        document.getElementById("loi").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>
